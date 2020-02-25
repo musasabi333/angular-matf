@@ -1,0 +1,14 @@
+<h1>Data Binding</h1>
+
+<h2>Interpolation</h2>
+<div>{{helloWorld}}!</div>
+<div>{{helloWorld + "!"}}</div>
+<div>2+2={{2+3}}</div>
+<div>2+2={{returnFive()}}</div>
+<div>2+2={{returnFive(2, 2)}}</div>
+
+<h2>Event Binding</h2>
+<div>
+  <button (click)="rollForInitiative()">Roll for initiative</button>
+  {{roll === undefined ? "" : 'Rolled ' + roll}}
+</div>

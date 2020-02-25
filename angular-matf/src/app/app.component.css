@@ -1,0 +1,26 @@
+:host {
+  display: flex;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  background: #00565B;
+  height: 100vh;
+}
+
+a {
+  color: #eee;
+  text-decoration: none;
+  padding: 10px;
+  font-size: 16px;
+}
+
+a:hover {
+  background-color: rgb(0, 123, 129);
+}
+
+a.active {
+  border-left: 4px solid #F5AD2A;
+  padding-left: 6px;
+}
