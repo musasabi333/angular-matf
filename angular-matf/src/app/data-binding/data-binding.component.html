@@ -11,4 +11,55 @@
 <div>
   <button (click)="rollForInitiative()">Roll for initiative</button>
   {{roll === undefined ? "" : 'Rolled ' + roll}}
+  <button (click)="doEvil()">Do Evil</button>
+</div>
+
+<h2>Property Binding</h2>
+<div>
+  <matf-child [parent]="'parent component'"></matf-child>
+</div>
+
+<h2>Two-way Data Binding</h2>
+<div>
+  <input [value]="name" (input)="name = $event.target.value"/>
+  <span>{{name}}</span>
+</div>
+<div>
+  Name: <input [(ngModel)]="name"/>
+  Hello {{name}}!
+</div>
+
+<div>
+  <matf-counter [counter]="3" (counterChange)="counterChanged($event)"></matf-counter>
+  {{'Counted ' + counter}}
+</div>
+
+<div>
+  <matf-counter [(counter)]="bananaCounter"></matf-counter>
+  {{'Banana Counted ' + bananaCounter}}
+</div>
+
+<h2>Pipes</h2>
+<div>
+  Today is {{today}}
+</div>
+
+<div>
+  Today is {{today | date}}
+</div>
+
+<div>
+  Today is {{today | date: 'MM/dd/yyyy'}}
+</div>
+
+<div>
+  {{'The problem withquotes onthe internet is that it is hard to verify their authenticity.' | quote: 'Abraham Lincoln'}}
+</div>
+
+<div>
+  {{'jJDIjsdkI890asD' | lowercase}}
+</div>
+
+<div>
+  {{'UPERCASE' | lowercase | uppercase}}
 </div>

@@ -9,11 +9,17 @@ export class DataBindingComponent implements OnInit {
 
   helloWorld = 'Hello World';
   roll: number;
+  name: string = "Charlie Brown";
+  counter: number;
+  bananaCounter: number;
+  today = new Date();
 
   constructor() { }
 
   ngOnInit() {
     this.roll = undefined;
+    this.counter = 0;
+    this.bananaCounter = 15;
   }
 
   returnFive(a?: number, b?: number): number {
@@ -28,4 +34,19 @@ export class DataBindingComponent implements OnInit {
     this.roll = Math.floor((Math.random() * 100) % 20 + 1);
   }
 
+  doEvil(): void {
+    this.helloWorld = `
+      <div>Evil Script</div>
+      <script>
+        alert('Evil Done!');
+      </script>
+    `;
+  }
+
+  counterChanged(value: number): void {
+    if (value < 0)
+      value = 0;
+
+    this.counter = value;
+  }
 }
