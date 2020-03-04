@@ -1,0 +1,48 @@
+<h1>Directives</h1>
+
+<h2>Structural Directives</h2>
+<div>
+    Peoples of Middle-earth:
+    <ul>
+        <li *ngFor="let race of peoples">
+            {{race}}
+        </li>
+    </ul>
+</div>
+
+<div>
+    Cats or Dogs?
+    <button (click)="selectedCat = true; selectedDog = false;">
+        Cats
+    </button>
+    <button (click)="selectedCat = false; selectedDog = true;">
+        Dogs
+    </button>
+
+    <div *ngIf="selectedCat || selectedDog">
+        <img *ngIf="selectedCat" style="height: 100px; width: 100px" src="https://i.kym-cdn.com/entries/icons/facebook/000/000/888/VanillaHappyCat.jpg"/>
+        <img *ngIf="selectedDog" style="height: 100px; width: 100px" src="https://i.pinimg.com/originals/8d/ec/f9/8decf9caed777b8d0d698e01270ce308.png"/>
+    </div>
+</div>
+
+<div *ngIf="true">
+    True
+</div>
+
+<div *ngIf="false">
+    False
+</div>
+
+<div>
+    <button *ngFor="let p of peoples" (click)="setValue(p)">{{p}}</button>
+
+    <span [ngSwitch]="selected">
+        <span *ngSwitchCase="'Elves'">Good</span>
+        <span *ngSwitchCase="'Men'">Good</span>
+        <span *ngSwitchCase="'Dwarves'">Good</span>
+        <span *ngSwitchCase="'Hobbits'">Good</span>
+        <span *ngSwitchCase="'Ents'">Good</span>
+        <span *ngSwitchCase="'Orcs'">Bad</span>
+        <span *ngSwitchCase="'Trolls'">Bad</span>
+    </span>
+</div>

@@ -10,6 +10,7 @@ import { InlineTemplateComponent } from './inline-template/inline-template.compo
 import { ChildComponent } from './child/child.component';
 import { CounterComponent } from './counter/counter.component';
 import { QuotePipe } from './quote.pipe';
+import { DirectivesComponent } from './directives/directives.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { QuotePipe } from './quote.pipe';
     InlineTemplateComponent,
     ChildComponent,
     CounterComponent,
-    QuotePipe
+    QuotePipe,
+    DirectivesComponent
   ],
   imports: [
     BrowserModule,
