@@ -11,6 +11,13 @@ import { ChildComponent } from './child/child.component';
 import { CounterComponent } from './counter/counter.component';
 import { QuotePipe } from './quote.pipe';
 import { DirectivesComponent } from './directives/directives.component';
+import { RemoteComponent } from './remote/remote.component';
+import { TvComponent } from './tv/tv.component';
+import { Tv1Component } from './tv1/tv1.component';
+import { Remote1Component } from './remote1/remote1.component';
+import { HighlightDirective } from './highlight.directive';
+import { DisableDirective } from './disable.directive';
+import { SpaceDirective } from './space.directive';
 
 @NgModule({
   declarations: [
@@ -21,7 +28,14 @@ import { DirectivesComponent } from './directives/directives.component';
     ChildComponent,
     CounterComponent,
     QuotePipe,
-    DirectivesComponent
+    DirectivesComponent,
+    RemoteComponent,
+    TvComponent,
+    Tv1Component,
+    Remote1Component,
+    HighlightDirective,
+    DisableDirective,
+    SpaceDirective
   ],
   imports: [
     BrowserModule,

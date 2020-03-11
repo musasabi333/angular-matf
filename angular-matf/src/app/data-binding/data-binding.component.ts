@@ -13,6 +13,7 @@ export class DataBindingComponent implements OnInit {
   counter: number;
   bananaCounter: number;
   today = new Date();
+  isWolverine = false;
 
   constructor() { }
 
@@ -48,5 +49,9 @@ export class DataBindingComponent implements OnInit {
       value = 0;
 
     this.counter = value;
+  }
+
+  putOnCostume() {
+    this.isWolverine = !this.isWolverine;
   }
 }

@@ -46,3 +46,27 @@
         <span *ngSwitchCase="'Trolls'">Bad</span>
     </span>
 </div>
+
+<h2>Attribute Directives</h2>
+<div>
+    <p>Don't trust everything you see. Even <span matfHighlight>salt</span> looks like <span matfHighlight>sugar</span>.</p>
+</div>
+
+<div>
+    <button matfDisable>Disabled button</button>
+</div>
+
+<div>
+    Captains of the USS Enterprise
+
+    <table>
+        <tr matfSpace [shirtColor]="'yellow'">
+            <td><img src="https://www.startrek.com/sites/default/files/styles/content_full/public/images/2019-07/89abe98de6071178edb1b28901a8f459.jpg?itok=UEwq0IRl"/></td>
+            <td>James T. Kirk</td>
+        </tr>
+        <tr matfSpace [shirtColor]="'red'">
+            <td><img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/jean-luc-picard-patrick-stewart-1558012106.jpg?crop=0.751xw:1.00xh;0.202xw,0&resize=480:*"/></td>
+            <td>Jean-Luc Picard</td>
+        </tr>
+    </table>
+</div>

@@ -63,3 +63,11 @@
 <div>
   {{'UPERCASE' | lowercase | uppercase}}
 </div>
+
+<h2>Style Binding</h2>
+<div>
+  <button (click)="putOnCostume()">Put on Wolverine costume</button>
+  <span [ngClass]="{'wolverine': isWolverine}">Wolverine</span>
+  <span [class.wolverine]="isWolverine">Wolverine</span>
+  <span [style.color]="isWolverine ? 'red' : 'blue'">Wolverine</span>
+</div>

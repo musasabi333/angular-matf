@@ -1,0 +1,7 @@
+<div>
+    <button class="power-button" (click)=turnOnOff()></button>
+</div>
+<div style="display: flex; flex-wrap: wrap; justify-content: space-evenly;">
+    <button *ngFor="let item of [].constructor(9); let i = index" (click)=changeChannel(i+1) class="number-button">{{i + 1}}</button>
+    <button (click)="changeChannel(0)" class="number-button">0</button>
+</div>
