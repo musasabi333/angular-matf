@@ -11,7 +11,10 @@
 <div>
   <button (click)="rollForInitiative()">Roll for initiative</button>
   {{roll === undefined ? "" : 'Rolled ' + roll}}
+</div>
+<div>
   <button (click)="doEvil()">Do Evil</button>
+  {{evilScript}}
 </div>
 
 <h2>Property Binding</h2>
@@ -53,11 +56,11 @@
 </div>
 
 <div>
-  {{'The problem withquotes onthe internet is that it is hard to verify their authenticity.' | quote: 'Abraham Lincoln'}}
+  {{'The problem with quotes on the internet is that it is hard to verify their authenticity.' | quote: 'Abraham Lincoln'}}
 </div>
 
 <div>
-  {{'jJDIjsdkI890asD' | lowercase}}
+  {{'ThIs sTRIng iS in VARIabLe CaPS!' | lowercase}}
 </div>
 
 <div>
@@ -66,8 +69,19 @@
 
 <h2>Style Binding</h2>
 <div>
-  <button (click)="putOnCostume()">Put on Wolverine costume</button>
-  <span [ngClass]="{'wolverine': isWolverine}">Wolverine</span>
-  <span [class.wolverine]="isWolverine">Wolverine</span>
-  <span [style.color]="isWolverine ? 'red' : 'blue'">Wolverine</span>
+  <p>
+    <button (click)="toggleWolverineCostume()">{{isWolverine ? 'Take off' : 'Put on'}} Wolverine costume</button>
+    <span [ngClass]="{'wolverine': isWolverine, 'superhero': isWolverine}">{{isWolverine ? 'Wolverine' : 'Logan'}}</span>
+  </p>
+  <p>
+    <button (click)="toggleSpiderManCostume()">{{isSpiderMan ? 'Take off' : 'Put on'}} Spider-Man costume</button>
+    <span [class.spider-man]="isSpiderMan"
+          [class.superhero]="isSpiderMan">{{isSpiderMan ? 'Spider-Man' : 'Peter Parker'}}</span>
+  </p>
+  <p>
+    <button (click)="toggleIronManCostume()">{{isIronMan ? 'Take off' : 'Put on'}} Iron Man costume</button>
+    <span [style.color]="isIronMan ? 'yellow' : 'initial'"
+          [style.backgroundColor]="isIronMan ? 'red' : 'initial'"
+          [class]="isIronMan ? 'superhero' : ''">{{isIronMan ? 'Iron Man' : 'Tony Stark'}}</span>
+  </p>
 </div>

@@ -1,7 +1,7 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
-  selector: 'app-remote',
+  selector: 'matf-remote',
   templateUrl: './remote.component.html',
   styleUrls: ['./remote.component.css']
 })

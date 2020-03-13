@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'matf-data-binding',
@@ -9,11 +9,14 @@ export class DataBindingComponent implements OnInit {
 
   helloWorld = 'Hello World';
   roll: number;
-  name: string = "Charlie Brown";
+  evilScript: string;
+  name = 'Charlie Brown';
   counter: number;
   bananaCounter: number;
   today = new Date();
   isWolverine = false;
+  isSpiderMan = false;
+  isIronMan = true;
 
   constructor() { }
 
@@ -36,7 +39,7 @@ export class DataBindingComponent implements OnInit {
   }
 
   doEvil(): void {
-    this.helloWorld = `
+    this.evilScript = `
       <div>Evil Script</div>
       <script>
         alert('Evil Done!');
@@ -45,13 +48,22 @@ export class DataBindingComponent implements OnInit {
   }
 
   counterChanged(value: number): void {
-    if (value < 0)
+    if (value < 0) {
       value = 0;
+    }
 
     this.counter = value;
   }
 
-  putOnCostume() {
+  toggleWolverineCostume() {
     this.isWolverine = !this.isWolverine;
+  }
+
+  toggleSpiderManCostume() {
+    this.isSpiderMan = !this.isSpiderMan;
+  }
+
+  toggleIronManCostume() {
+    this.isIronMan = !this.isIronMan;
   }
 }

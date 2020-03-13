@@ -23,13 +23,18 @@ h2 {
   margin: 10px;
 }
 
-div {
+div:not([class]) {
   margin: 10px;
   box-shadow: 0 2px 1px -1px rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 3px 0 rgba(0,0,0,.12);
   transition: box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);
   padding: 16px;
   border-radius: 4px;
   background: #FFF;
+}
+
+p {
+  margin: 0;
+  padding: 10px;
 }
 
 code {
@@ -39,12 +44,11 @@ code {
   border-radius: 4px;
 }
 
-button {
+button:not([class]) {
   color: #fff;
   cursor: pointer;
   background-color: #00565B;
   box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
-  margin-right: 8px;
   box-sizing: border-box;
   position: relative;
   -webkit-user-select: none;
@@ -60,7 +64,7 @@ button {
   text-decoration: none;
   vertical-align: baseline;
   text-align: center;
-  margin: 0;
+  margin: 0 5px;
   min-width: 64px;
   line-height: 36px;
   padding: 0 16px;
@@ -71,12 +75,7 @@ button {
   font-size: 14px;
 }
 
-button:hover {
+button:not([class]):hover {
   background-color: #fff;
   color: #00565B;
-}
-
-.wolverine {
-  color: blue;
-  background-color: yellow;
 }
