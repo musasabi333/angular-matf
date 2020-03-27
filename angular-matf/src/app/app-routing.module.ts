@@ -5,6 +5,7 @@ import { InlineTemplateComponent } from './inline-template/inline-template.compo
 import { DataBindingComponent } from './data-binding/data-binding.component';
 import { DirectivesComponent } from './directives/directives.component';
 import { TvComponent } from './tv/tv.component';
+import { WorkingWithClassesComponent } from './working-with-classes/working-with-classes.component';
 
 const routes: Routes = [
   { path: 'type-script', component: TypeScriptComponent },
@@ -16,7 +17,8 @@ const routes: Routes = [
     path: '',
     redirectTo: '/type-script',
     pathMatch: 'full'
-  }
+  },
+  { path: 'classes', component: WorkingWithClassesComponent }
 ];
 
 @NgModule({

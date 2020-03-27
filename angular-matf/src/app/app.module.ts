@@ -16,6 +16,7 @@ import { TvComponent } from './tv/tv.component';
 import { HighlightDirective } from './highlight.directive';
 import { DisableDirective } from './disable.directive';
 import { SpaceDirective } from './space.directive';
+import { WorkingWithClassesComponent } from './working-with-classes/working-with-classes.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { SpaceDirective } from './space.directive';
     TvComponent,
     HighlightDirective,
     DisableDirective,
-    SpaceDirective
+    SpaceDirective,
+    WorkingWithClassesComponent
   ],
   imports: [
     BrowserModule,

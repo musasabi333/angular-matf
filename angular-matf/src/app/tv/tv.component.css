@@ -1,30 +1,30 @@
 matf-remote {
-    float: left;
-    background-color: #333;
-    padding: 5px;
-    margin: 5px;
-    width: 200px;
-    border-radius: 15px;
+  float: left;
+  background-color: #333;
+  padding: 5px;
+  margin: 5px;
+  width: 200px;
+  border-radius: 15px;
 }
 
 .tv {
-    float: left;
-    width: 640px;
-    background-color: #333;
-    margin: 5px;
-    padding: 25px;
+  float: left;
+  width: 640px;
+  background-color: #333;
+  margin: 5px;
+  padding: 25px;
 }
 
 .tv-screen {
-    background-image: url('https://media1.giphy.com/media/XuBNdP9Pb7W9i/giphy.gif');
-    width: 100%;
-    height: 360px;
+  background-image: url('https://media1.giphy.com/media/XuBNdP9Pb7W9i/giphy.gif');
+  width: 100%;
+  height: 360px;
 }
 
 .tv-screen-off {
-    background-color: #111;
-    width: 100%;
-    height: 360px;
+  background-color: #111;
+  width: 100%;
+  height: 360px;
 }
 
 .channel {

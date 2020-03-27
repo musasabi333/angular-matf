@@ -1,0 +1,36 @@
+<h1>Working With Classes</h1>
+
+<div>
+  <table>
+    <tr>
+      <th></th>
+      <th>Picture</th>
+      <th>Name</th>
+      <th>Midi-Chlorian Count</th>
+    </tr>
+    <tr *ngFor="let j of jedi; let i = index">
+      <td>{{i + 1}}</td>
+      <td><img [src]="j.picture"/></td>
+      <td>{{j.name}}</td>
+      <td>{{j.midichlorianCount}}</td>
+    </tr>
+  </table>
+</div>
+
+<div>
+  <span style="font-weight: bold;">Add New Jedi</span>
+  <table>
+    <tr>
+      <td>Name</td><td><input type="text" #name /></td>
+    </tr>
+    <tr>
+      <td>Midi-Chlorian Count</td><td><input type="number" #midiChlorianCount /></td>
+    </tr>
+    <tr>
+      <td>Picture Link</td><td><input type="text" #picture /></td>
+    </tr>
+    <tr>
+      <td><button (click)="addJedi(name.value, midiChlorianCount.value, picture.value)">Add Jedi</button></td>
+    </tr>
+  </table>
+</div>
