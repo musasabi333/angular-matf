@@ -1,0 +1,20 @@
+<p class="top book-binding{{bookType}}"></p>
+<h3>{{book.name}}</h3>
+<p class="bottom book-binding{{bookType}}"></p>
+ 
+<div class="book-info" *ngIf="infoVisible">
+    <table>
+        <tr>
+            <td>Name</td>
+            <td>{{book.name}}</td>
+        </tr>
+        <tr>
+            <td>Author</td>
+            <td>{{book.author}}</td>
+        </tr>
+        <tr>
+            <td>Price</td>
+            <td>{{book.price | currency}}</td>
+        </tr>
+    </table>
+</div>

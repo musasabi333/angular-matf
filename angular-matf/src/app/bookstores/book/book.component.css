@@ -1,0 +1,93 @@
+:host {
+  min-height: 250px;
+  width: 50px;
+  position: relative;
+  font-size: small;
+  display: inline-block;
+  transition: transform 150ms ease-out;
+  border-radius: 3px;
+  margin-right: 1px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+:host:hover {
+  z-index: 10;
+  transform: matrix3d(1.1, 0, 0, 0, 0, 1.1, 0, 0.001, 0, 0, 1, 0, 0, 2, 0, 1);
+}
+
+:host.book1 {
+  background-color: #800020;
+}
+
+:host.book2 {
+  background-color: #8da683;
+}
+
+:host.book3 {
+  background-color: #a6bd9e;
+}
+
+:host.book4 {
+  background-color: #dc8920;
+}
+
+.book-binding1 {
+  background-color: #fccc47;
+}
+
+.book-binding2 {
+  background-color: #f2dcb1;
+}
+
+.book-binding3 {
+  background-color: #3c393e;
+}
+
+.book-binding4 {
+  background-color: #b8483c;
+}
+
+h3 {
+  font-size: 1rem;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  width: 155px;
+
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  transform: rotate(270deg);
+  transform-origin: 0 0;
+}
+
+p.top, p.bottom {
+  width: 50px;
+  height: 10px;
+  display: block;
+}
+
+.bottom {
+  position: absolute;
+  bottom: 15px;
+}
+
+.top {
+  position: absolute;
+  top: 15px;
+}
+
+.book-info {
+    position: relative;
+    left: 60px;
+    min-width: 200px;
+    background-color: #333;
+    color: #eee;
+    border-radius: 3px;
+}

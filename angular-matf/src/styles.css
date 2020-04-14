@@ -32,7 +32,7 @@ div:not([class]) {
   background: #FFF;
 }
 
-p {
+p:not([class]) {
   margin: 0;
   padding: 10px;
 }

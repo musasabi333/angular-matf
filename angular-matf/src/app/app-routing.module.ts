@@ -6,6 +6,7 @@ import { DataBindingComponent } from './data-binding/data-binding.component';
 import { DirectivesComponent } from './directives/directives.component';
 import { TvComponent } from './tv/tv.component';
 import { WorkingWithClassesComponent } from './working-with-classes/working-with-classes.component';
+import { BookstoreListComponent } from './bookstores/bookstore-list/bookstore-list.component';
 
 const routes: Routes = [
   { path: 'type-script', component: TypeScriptComponent },
@@ -18,7 +19,8 @@ const routes: Routes = [
     redirectTo: '/type-script',
     pathMatch: 'full'
   },
-  { path: 'classes', component: WorkingWithClassesComponent }
+  { path: 'classes', component: WorkingWithClassesComponent },
+  { path: 'bookstores', component: BookstoreListComponent }
 ];
 
 @NgModule({

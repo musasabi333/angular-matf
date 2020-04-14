@@ -1,0 +1,34 @@
+<h1>
+  {{name}}
+</h1>
+
+<table>
+  <tr>
+    <td>Find By Author</td>
+    <td><input type="text" #authorSearch /></td>
+    <td><button (click)="filter(authorSearch.value)">Search</button></td>
+  </tr>
+</table>
+
+<matf-book *ngFor="let book of books" [book]="book"></matf-book>
+
+<table>
+  <tr>
+    <td><span style="font-weight: bold;">Add New Book</span></td>
+  </tr>
+  <tr>
+    <td>Name</td>
+    <td><input type="text" #bookName /></td>
+  </tr>
+  <tr>
+    <td>Author</td>
+    <td><input type="text" #author /></td>
+  </tr>
+  <tr>
+    <td>Price</td>
+    <td><input type="number" #price /></td>
+  </tr>
+  <tr>
+    <td><button (click)="addBook(bookName.value, author.value, price.value)">Add Book</button></td>
+  </tr>
+</table>
