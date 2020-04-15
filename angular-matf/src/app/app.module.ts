@@ -18,6 +18,7 @@ import { DisableDirective } from './disable.directive';
 import { SpaceDirective } from './space.directive';
 import { WorkingWithClassesComponent } from './working-with-classes/working-with-classes.component';
 import { BookstoresModule } from './bookstores/bookstores.module';
+import { RxjsComponent } from './rxjs/rxjs.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { BookstoresModule } from './bookstores/bookstores.module';
     HighlightDirective,
     DisableDirective,
     SpaceDirective,
-    WorkingWithClassesComponent
+    WorkingWithClassesComponent,
+    RxjsComponent
   ],
   imports: [
     BrowserModule,

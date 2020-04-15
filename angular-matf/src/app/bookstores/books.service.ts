@@ -25,6 +25,6 @@ export class BooksService {
   }
 
   getBooksByAuthor(author: string): Book[] {
-    return this.books.filter((book) => book.author === author);
+    return this.books.filter((book) => book.author.toLowerCase().includes(author.toLowerCase()));
   }
 }

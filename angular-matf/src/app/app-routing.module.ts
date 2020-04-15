@@ -7,6 +7,7 @@ import { DirectivesComponent } from './directives/directives.component';
 import { TvComponent } from './tv/tv.component';
 import { WorkingWithClassesComponent } from './working-with-classes/working-with-classes.component';
 import { BookstoreListComponent } from './bookstores/bookstore-list/bookstore-list.component';
+import { RxjsComponent } from './rxjs/rxjs.component';
 
 const routes: Routes = [
   { path: 'type-script', component: TypeScriptComponent },
@@ -20,7 +21,8 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   { path: 'classes', component: WorkingWithClassesComponent },
-  { path: 'bookstores', component: BookstoreListComponent }
+  { path: 'bookstores', component: BookstoreListComponent },
+  { path: 'rxjs', component: RxjsComponent }
 ];
 
 @NgModule({
