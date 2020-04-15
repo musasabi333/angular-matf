@@ -1,0 +1,11 @@
+{
+    "id": 7,
+    "name": "Squirtle",
+    "type": [
+        "Water"
+    ],
+    "hp": 44,
+    "attack": 48,
+    "defense": 65,
+    "speed": 43
+}
