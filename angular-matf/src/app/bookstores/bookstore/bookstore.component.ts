@@ -17,7 +17,10 @@ export class BookstoreComponent implements OnInit {
   constructor(private booksService: BooksService) { }
 
   ngOnInit() {
-    this.books = this.booksService.getBooks();
+    this.booksService.getBooks().subscribe(
+      books => this.books = books,
+      error => console.error(error)
+    );
   }
 
   addBook(name: string, author: string, price: number): void {
@@ -26,9 +29,15 @@ export class BookstoreComponent implements OnInit {
 
   filter(author: string): void {
     if (author === undefined || author === '') {
-      this.books = this.booksService.getBooks();
+      this.booksService.getBooks().subscribe(
+        books => this.books = books,
+        error => console.error(error)
+      );
     } else {
-      this.books = this.booksService.getBooksByAuthor(author);
+      this.booksService.getBooksByAuthor(author).subscribe(
+        books => this.books = books,
+        error => console.error(error)
+      );
     }
   }
 

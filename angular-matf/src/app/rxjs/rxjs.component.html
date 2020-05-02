@@ -42,3 +42,28 @@
   <p style="font-weight: bold;">Scan</p>
   <p *ngFor="let s of scan">{{s}}</p>
 </div>
+
+<div>
+  <p style="font-weight: bold;">Flat Map</p>
+  <p *ngFor="let fM of flatMap">
+    {{fM.name}}
+    <span *ngFor="let type of fM.type">{{type}} </span>
+  </p>
+</div>
+
+<div>
+  <p style="font-weight: bold;">Pluck</p>
+  <p *ngFor="let p of pluck">{{p}}</p>
+</div>
+
+<div>
+  <p style="font-weight: bold;">Stringify</p>
+  <p *ngFor="let p of stringify">{{p}}</p>
+</div>
+
+<div>
+  <p style="font-weight: bold;">Pipe</p>
+  <p *ngFor="let p of pipe">
+    <span *ngFor="let name of p">{{name}} </span>
+  </p>
+</div>

@@ -1,0 +1,47 @@
+[
+  {
+    "name": "American Gods",
+    "author": "Neil Gaiman",
+    "price": 9.99
+  },
+  {
+    "name": "The Way of Kings",
+    "author": "Brandon Sanderson",
+    "price": 8.99
+  },
+  {
+    "name": "Ringworld",
+    "author": "Larry Niven",
+    "price": 4.89
+  },
+  {
+    "name": "Norwegian Wood",
+    "author": "Haruki Murakami",
+    "price": 7.99
+  },
+  {
+    "name": "The Hitchhiker's Guide to the Galaxy",
+    "author": "Douglas Adams",
+    "price": 6.89
+  },
+  {
+    "name": "Autobiografija",
+    "author": "Branislav Nusic",
+    "price": 6.99
+  },
+  {
+    "name": "Harry Potter and the Chamber of Secrets",
+    "author": "J. K. Rowling",
+    "price": 7.29
+  },
+  {
+    "name": "Dune",
+    "author": "Frank Herbert",
+    "price": 9.39
+  },
+  {
+    "name": "The Hobbit",
+    "author": "J. R. R. Tolkien",
+    "price": 10.99
+  }
+]

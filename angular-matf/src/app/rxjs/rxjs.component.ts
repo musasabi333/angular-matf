@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
 import { Observable, from, range, interval } from 'rxjs';
-import { map, filter, reduce, scan } from 'rxjs/operators';
+import { map, filter, reduce, scan, flatMap, pluck } from 'rxjs/operators';
+import { ajax } from 'rxjs/ajax';
 
 @Component({
   selector: 'matf-rxjs',
@@ -20,6 +21,10 @@ export class RxjsComponent implements OnInit {
   filter = [];
   reduce = [];
   scan = [];
+  flatMap = [];
+  pluck = [];
+  stringify = [];
+  pipe = [];
 
   constructor() { }
 
@@ -33,6 +38,10 @@ export class RxjsComponent implements OnInit {
     this.operators2();
     this.operators3();
     this.operators4();
+    this.operators5();
+    this.operators6();
+    this.operators7();
+    this.operators8();
   }
 
   newObservable1() {
@@ -139,6 +148,50 @@ export class RxjsComponent implements OnInit {
     );
 
     setTimeout(() => s.unsubscribe(), 100);
+  }
+
+  operators5() {
+    const o$ = from([1, 4, 7]).pipe(
+      flatMap(id => ajax.getJSON(`assets/pokemon/${id}.json`))
+    );
+
+    o$.subscribe(
+      value => this.flatMap.push(value)
+    );
+  }
+
+  operators6() {
+    const o$ = from([1, 4, 7]).pipe(
+      flatMap(id => ajax.getJSON(`assets/pokemon/${id}.json`)),
+      pluck('name')
+    );
+
+    o$.subscribe(
+      value => this.pluck.push(value)
+    );
+  }
+
+  operators7() {
+    const o$ = from([1, 4, 7]).pipe(
+      flatMap(id => ajax.getJSON(`assets/pokemon/${id}.json`)),
+      map(p => JSON.stringify(p))
+    );
+
+    o$.subscribe(
+      value => this.stringify.push(value)
+    );
+  }
+
+  operators8() {
+    const o$ = from([1, 4, 7]).pipe(
+      flatMap(id => ajax.getJSON(`assets/pokemon/${id}.json`)),
+      pluck('name'),
+      reduce((acc, pokemon) => [...acc, pokemon], [])
+    );
+
+    o$.subscribe(
+      value => this.pipe.push(value)
+    );
   }
 
 }

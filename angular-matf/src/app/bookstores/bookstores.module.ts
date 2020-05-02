@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { BookComponent } from './book/book.component';
 import { BookstoreComponent } from './bookstore/bookstore.component';
 import { BookstoreListComponent } from './bookstore-list/bookstore-list.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -11,7 +12,8 @@ import { BookstoreListComponent } from './bookstore-list/bookstore-list.componen
     BookstoreListComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    HttpClientModule
   ],
   exports: [
     BookstoreListComponent
