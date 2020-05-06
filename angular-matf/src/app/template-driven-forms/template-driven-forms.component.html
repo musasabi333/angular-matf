@@ -1,0 +1,35 @@
+<h1>Template-Driven Forms</h1>
+
+<div>
+  <form #personForm="ngForm" (ngSubmit)="onSubmit()">
+    <label>Name </label>
+    <input type="text" [(ngModel)]="person.name" name="name" required #name="ngModel"/>
+
+    <span *ngIf="!name.valid && !name.pristine">Name is required</span>
+
+    <br>
+
+    <label>Surname </label>
+    <input type="text" [(ngModel)]="person.surname" name="surname"/>
+
+    <br>
+
+    <input type="submit" value="Submit" [disabled]="!personForm.valid"/>
+  </form>
+
+  Hello, my name is {{person.name}} {{person.surname}}
+</div>
+
+<div>
+  <form #person1Form="ngForm">
+    <label>Name </label>
+    <input type="text" [(ngModel)]="person1.name" name="name"/>
+
+    <br>
+
+    <label>Surname </label>
+    <input type="text" [(ngModel)]="person1.surname" name="surname"/>
+  </form>
+
+  Hello, my name is {{person1.name}} {{person1.surname}}
+</div>

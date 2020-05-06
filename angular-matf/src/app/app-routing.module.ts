@@ -8,6 +8,8 @@ import { TvComponent } from './tv/tv.component';
 import { WorkingWithClassesComponent } from './working-with-classes/working-with-classes.component';
 import { BookstoreListComponent } from './bookstores/bookstore-list/bookstore-list.component';
 import { RxjsComponent } from './rxjs/rxjs.component';
+import { TemplateDrivenFormsComponent } from './template-driven-forms/template-driven-forms.component';
+import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.component';
 
 const routes: Routes = [
   { path: 'type-script', component: TypeScriptComponent },
@@ -22,7 +24,9 @@ const routes: Routes = [
   },
   { path: 'classes', component: WorkingWithClassesComponent },
   { path: 'bookstores', component: BookstoreListComponent },
-  { path: 'rxjs', component: RxjsComponent }
+  { path: 'rxjs', component: RxjsComponent },
+  { path: 'template-driven-forms', component: TemplateDrivenFormsComponent },
+  { path: 'reactive-forms', component: ReactiveFormsComponent }
 ];
 
 @NgModule({

@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -19,6 +19,8 @@ import { SpaceDirective } from './space.directive';
 import { WorkingWithClassesComponent } from './working-with-classes/working-with-classes.component';
 import { BookstoresModule } from './bookstores/bookstores.module';
 import { RxjsComponent } from './rxjs/rxjs.component';
+import { TemplateDrivenFormsComponent } from './template-driven-forms/template-driven-forms.component';
+import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.component';
 
 @NgModule({
   declarations: [
@@ -36,11 +38,14 @@ import { RxjsComponent } from './rxjs/rxjs.component';
     DisableDirective,
     SpaceDirective,
     WorkingWithClassesComponent,
-    RxjsComponent
+    RxjsComponent,
+    TemplateDrivenFormsComponent,
+    ReactiveFormsComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     AppRoutingModule,
     BookstoresModule
   ],

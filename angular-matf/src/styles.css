@@ -44,7 +44,9 @@ code {
   border-radius: 4px;
 }
 
-button:not([class]) {
+button:not([class]),
+input[type="button"],
+input[type="submit"] {
   color: #fff;
   cursor: pointer;
   background-color: #00565B;
@@ -75,7 +77,17 @@ button:not([class]) {
   font-size: 14px;
 }
 
-button:not([class]):hover {
+button:not([class]):hover,
+input[type="button"]:hover,
+input[type="submit"]:hover {
   background-color: #fff;
   color: #00565B;
+}
+
+button:not([class]):disabled,
+input[type="button"]:disabled,
+input[type="submit"]:disabled {
+  background-color: #aaa;
+  color: #444;
+  cursor: auto;
 }

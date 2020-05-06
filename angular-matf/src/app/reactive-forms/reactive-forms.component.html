@@ -1,0 +1,106 @@
+<h1>Reactive Forms</h1>
+
+<!-- <div>
+  <label>Name </label>
+  <input type="text" [formControl]="name" name="name"/>
+  Hello {{name.value}}
+
+  <br>
+
+  Is dirty: {{name.dirty}}<br>
+  Is pristine: {{name.pristine}}<br>
+  Is touched: {{name.touched}}<br>
+  Is untouched: {{name.untouched}}<br>
+
+  <button (click)="getNewName()">Get a new name</button>
+</div> -->
+
+<div>
+  <form [formGroup]="personForm">
+    <label>Name </label>
+    <input type="text" formControlName="name" name="name" required minlength="2"/>
+
+    <p *ngIf="personForm.controls.name.errors">
+      <span *ngIf="personForm.controls.name.errors.required">Name is required</span>
+      <span *ngIf="personForm.controls.name.errors.minlength">Name needs to be at least 2 characters long</span>
+    </p>
+
+    <br>
+
+    <label>Surname </label>
+    <input type="text" formControlName="surname" name="surname"/>
+
+    <br>
+
+    <p formGroupName="address">
+      <span>Address</span>
+
+      <br>
+
+      <label>Street </label>
+      <input type="text" formControlName="street" name="street"/>
+      <br>
+
+      <label>City </label>
+      <input type="text" formControlName="city" name="city"/>
+      <br>
+
+      <label>State </label>
+      <input type="text" formControlName="state" name="state"/>
+      <br>
+
+      <label>Zip </label>
+      <input type="text" formControlName="zip" name="zip"/>
+      <br>
+    </p>
+
+    <br>
+
+    <input type="submit" value="Submit" [disabled]="!personForm.valid"/>
+    <button (click)="updateProfile()">Get a new name and address</button>
+  </form>
+</div>
+
+<div>
+  <form [formGroup]="boardGame">
+    <label>Name </label>
+    <input type="text" formControlName="name" name="name" required maxlength="100"/>
+
+    <p *ngIf="personForm.controls.name.errors">
+      <span *ngIf="personForm.controls.name.errors.required">Name is required</span>
+      <span *ngIf="personForm.controls.name.errors.minlength">Name needs to be at most 100 characters long</span>
+    </p>
+
+    <br>
+
+    <label>Creator </label>
+    <input type="text" formControlName="creator" name="creator"/>
+
+    <br>
+
+    <p formGroupName="info">
+      <span>Game Info</span>
+
+      <br>
+
+      <label>Number of Players </label>
+      <input type="text" formControlName="numberOfPlayers" name="numberOfPlayers" pattern="[1-9][0-9]*"/>
+      <br>
+
+      <label>Duration of a Game in Minutes </label>
+      <input type="text" formControlName="duration" name="duration" pattern="[1-9][0-9]*"/>
+      <br>
+
+
+      <!-- <span *ngIf="boardGame.controls.numberOfPlayers.errors">
+        <span *ngIf="boardGame.controls.numberOfPlayers.errors.pattern">Number of players must be a valid number</span>
+      </span>
+      <span *ngIf="boardGame.controls.duration.errors">
+        <span *ngIf="boardGame.controls.duration.errors.pattern">Duration of the game must be a valid number of minutes</span>
+      </span> -->
+
+    </p>
+
+    <input type="submit" value="Submit" [disabled]="!boardGame.valid"/>
+  </form>
+</div>
