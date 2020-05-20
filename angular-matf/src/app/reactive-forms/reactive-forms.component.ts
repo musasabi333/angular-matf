@@ -25,11 +25,11 @@ export class ReactiveFormsComponent implements OnInit {
   });
 
   boardGame = this.formBuilder.group({
-    name: ['', Validators.required, Validators.maxLength(100)],
+    name: ['', [ Validators.required, Validators.maxLength(100) ]],
     creator: [''],
     info: this.formBuilder.group({
-      numberOfPlayers: [1, Validators.pattern('[1-9][0-9]*')],
-      duration: [1, Validators.pattern('[1-9][0-9]*')]
+      numberOfPlayers: [1, [Validators.pattern('[1-9][0-9]*')]],
+      duration: [1, [Validators.pattern('[1-9][0-9]*')]]
     })
   });
 

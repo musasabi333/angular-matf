@@ -1,0 +1,55 @@
+<h1>Angular Material</h1>
+
+<div>
+  <mat-card>
+    <mat-form-field>
+      <mat-label>Minimum Value</mat-label>
+      <input matInput #min>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Maximum Value</mat-label>
+      <input matInput #max>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Step</mat-label>
+      <input matInput #step>
+    </mat-form-field>
+
+    <mat-checkbox #thumb>Thumbs Up!</mat-checkbox>
+
+    <mat-slider #slider [min]="min.value" [max]="max.value" [step]="step.value" [thumbLabel]="thumb.checked" [value]=""></mat-slider>
+
+    <span *ngIf="!thumb.checked">
+      {{slider.value}}
+    </span>
+  </mat-card>
+</div>
+
+<div>
+  <matf-address></matf-address>
+</div>
+
+<div>
+  <matf-navigation></matf-navigation>
+</div>
+
+<div>
+  <matf-drag-drop-table></matf-drag-drop-table>
+</div>
+
+<div>
+  <h1 cdkDrag>Drag me if you can.</h1>
+</div>
+
+<div>
+  <mat-card cdkDropList style="height: 100px">
+    <h1 cdkDrag>Drag me if you can. (Inside this drop list)</h1>
+  </mat-card>
+</div>
+
+<div>
+  <h1 class="mat-display-1">Jackdaws love my big sphinx of quartz.</h1>
+  <h2 class="mat-h2">The quick brown fox jumps over the lazy dog.</h2>
+</div>

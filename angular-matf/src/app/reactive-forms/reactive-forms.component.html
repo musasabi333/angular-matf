@@ -15,7 +15,7 @@
   <button (click)="getNewName()">Get a new name</button>
 </div> -->
 
-<div>
+<!-- <div>
   <form [formGroup]="personForm">
     <label>Name </label>
     <input type="text" formControlName="name" name="name" required minlength="2"/>
@@ -59,16 +59,16 @@
     <input type="submit" value="Submit" [disabled]="!personForm.valid"/>
     <button (click)="updateProfile()">Get a new name and address</button>
   </form>
-</div>
+</div> -->
 
 <div>
-  <form [formGroup]="boardGame">
+  <form [formGroup]="boardGame" #bg="ngForm">
     <label>Name </label>
-    <input type="text" formControlName="name" name="name" required maxlength="100"/>
+    <input id="name" type="text" formControlName="name" name="name" required maxlength="100"/>
 
-    <p *ngIf="personForm.controls.name.errors">
-      <span *ngIf="personForm.controls.name.errors.required">Name is required</span>
-      <span *ngIf="personForm.controls.name.errors.minlength">Name needs to be at most 100 characters long</span>
+    <p *ngIf="name.errors !== null">
+      <span *ngIf="name.errors.required">Name is required</span>
+      <span *ngIf="name.errors.maxlength">Name needs to be at most 100 characters long</span>
     </p>
 
     <br>
@@ -92,15 +92,15 @@
       <br>
 
 
-      <!-- <span *ngIf="boardGame.controls.numberOfPlayers.errors">
-        <span *ngIf="boardGame.controls.numberOfPlayers.errors.pattern">Number of players must be a valid number</span>
+      <!-- <span *ngIf="numberOfPlayers.errors">
+        <span *ngIf="numberOfPlayers.errors.pattern">Number of players must be a valid number</span>
       </span>
-      <span *ngIf="boardGame.controls.duration.errors">
-        <span *ngIf="boardGame.controls.duration.errors.pattern">Duration of the game must be a valid number of minutes</span>
+      <span *ngIf="duration.errors">
+        <span *ngIf="duration.errors.pattern">Duration of the game must be a valid number of minutes</span>
       </span> -->
 
     </p>
 
-    <input type="submit" value="Submit" [disabled]="!boardGame.valid"/>
+    <input type="submit" value="Submit" [disabled]="bg.invalid"/>
   </form>
 </div>

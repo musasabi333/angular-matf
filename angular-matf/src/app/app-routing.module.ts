@@ -10,6 +10,7 @@ import { BookstoreListComponent } from './bookstores/bookstore-list/bookstore-li
 import { RxjsComponent } from './rxjs/rxjs.component';
 import { TemplateDrivenFormsComponent } from './template-driven-forms/template-driven-forms.component';
 import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.component';
+import { MaterialComponent } from './material/material.component';
 
 const routes: Routes = [
   { path: 'type-script', component: TypeScriptComponent },
@@ -26,7 +27,8 @@ const routes: Routes = [
   { path: 'bookstores', component: BookstoreListComponent },
   { path: 'rxjs', component: RxjsComponent },
   { path: 'template-driven-forms', component: TemplateDrivenFormsComponent },
-  { path: 'reactive-forms', component: ReactiveFormsComponent }
+  { path: 'reactive-forms', component: ReactiveFormsComponent },
+  { path: 'material', component: MaterialComponent }
 ];
 
 @NgModule({

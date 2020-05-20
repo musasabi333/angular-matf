@@ -21,6 +21,26 @@ import { BookstoresModule } from './bookstores/bookstores.module';
 import { RxjsComponent } from './rxjs/rxjs.component';
 import { TemplateDrivenFormsComponent } from './template-driven-forms/template-driven-forms.component';
 import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialComponent } from './material/material.component';
+
+import { MatCardModule } from '@angular/material/card';
+import { MatSliderModule } from '@angular/material/slider';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { AddressComponent } from './material/address/address.component';
+import { MatButtonModule } from '@angular/material/button';
+import { MatSelectModule } from '@angular/material/select';
+import { MatRadioModule } from '@angular/material/radio';
+import { NavigationComponent } from './material/navigation/navigation.component';
+import { LayoutModule } from '@angular/cdk/layout';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatIconModule } from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
+import { DragDropTableComponent } from './material/drag-drop-table/drag-drop-table.component';
+import { DragDropModule } from '@angular/cdk/drag-drop';
 
 @NgModule({
   declarations: [
@@ -40,14 +60,33 @@ import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.componen
     WorkingWithClassesComponent,
     RxjsComponent,
     TemplateDrivenFormsComponent,
-    ReactiveFormsComponent
+    ReactiveFormsComponent,
+    MaterialComponent,
+    AddressComponent,
+    NavigationComponent,
+    DragDropTableComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
     AppRoutingModule,
-    BookstoresModule
+    BookstoresModule,
+    BrowserAnimationsModule,
+    MatCardModule,
+    MatSliderModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatCheckboxModule,
+    MatButtonModule,
+    MatSelectModule,
+    MatRadioModule,
+    LayoutModule,
+    MatToolbarModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatListModule,
+    DragDropModule
   ],
   providers: [],
   bootstrap: [AppComponent]
